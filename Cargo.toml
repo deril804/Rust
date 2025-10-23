@@ -3,6 +3,17 @@ name = "zerotoprod"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+# We could use any path here, but we are following the community convention
+# We could specify a library name using the `name` field. If unspecified,
+# cargo will default 
+path= "src/lib.rs"
+
+[[bin]]
+path= "src/main.rs"
+name = "zerotoprod"
+
 [dependencies]
 actix-web = "4"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+reqwest= "0.12"
